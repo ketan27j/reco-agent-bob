@@ -94,6 +94,8 @@ Diversity score: 0.6
 ```
 ### Basic Usage - Example 2
 
+generated_user_data.csv file is generated using data/generate_user_data.py for testing purpose.
+
 ```python
 from reco_agent_bob import LiquorRecommendationEngine
 
