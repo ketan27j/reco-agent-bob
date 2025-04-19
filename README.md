@@ -73,6 +73,7 @@ for rec in recommendations["recommendations"]:
 ```
 ### Output
 
+```python
 Recommendations for user 100248:
 1. Elijah Craig Toasted Barrel (Bourbon) - $49.72
    Reason: Similar to Heaven Hill Bottled In Bond 7 Year in your collection
@@ -90,6 +91,7 @@ Collection size: 5 bottles
 Average bottle price: $67.96
 Spirits in collection: Canadian Whisky, Gin, Bourbon
 Diversity score: 0.6
+```
 
 ### Data Format
 
