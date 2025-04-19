@@ -1,0 +1,6 @@
+id,bar_id,user_id,user_name,added,fill_percentage,product_id,product_name,brand,brand_id,spirit,size,proof,average_msrp,fair_price,shelf_price,popularity
+1030823,1030823,100248,carriebaxus,2024-03-12,0,13266,"Heaven Hill Bottled In Bond 7 Year","Heaven Hill",430,Bourbon,750,100,39.99,41.79,47.19,100083
+1007256,1007256,100248,carriebaxus,2024-03-05,0,24961,"Rare Perfection 14 Year","Rare Perfection",2827,"Canadian Whisky",750,100.7,160,164.85,179.39,0
+1007254,1007254,100248,carriebaxus,2024-03-05,100,16773,"Empress 1908 Indigo Gin","Empress 1908",3101,Gin,750,85,39.97,51.47,43.19,3
+993981,993981,100248,carriebaxus,2024-03-01,76,2580,"J.P. Wiser's 18 Year","J.P. Wiser's",159,"Canadian Whisky",750,80,61.87,65.61,68.04,0
+950916,950916,100248,carriebaxus,2024-02-16,100,6462,"Hendrick's Gin",Hendrick's,1074,Gin,750,88,37.97,40.56,39.13,930
