@@ -2,7 +2,9 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
-import json
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 class LiquorRecommendationEngine:
     def __init__(self, user_collection_path, bottle_dataset_path):
@@ -333,10 +335,11 @@ class LiquorRecommendationEngine:
 # Example usage
 if __name__ == "__main__":
     # Initialize the recommendation engine
-    rec_engine = LiquorRecommendationEngine("data/generated_user_data.csv", "data/501_Bottle_Dataset.csv")
+    rec_engine = LiquorRecommendationEngine("data/user_data.csv", "data/501_Bottle_Dataset.csv")
+    #rec_engine = LiquorRecommendationEngine("data/generated_user_data.csv", "data/501_Bottle_Dataset.csv")
     
     # Generate recommendations for a specific user
-    user_id = 100002 #100248  # Example user ID
+    user_id = 100248  # Example user ID
     recommendations = rec_engine.recommend_for_user(user_id)
     
     print(f"Recommendations for user {user_id}:")
