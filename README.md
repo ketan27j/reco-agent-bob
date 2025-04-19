@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Basic Usage
+### Basic Usage - Example 1
 
 ```python
 from reco_agent_bob import LiquorRecommendationEngine
@@ -92,7 +92,49 @@ Average bottle price: $67.96
 Spirits in collection: Canadian Whisky, Gin, Bourbon
 Diversity score: 0.6
 ```
+### Basic Usage - Example 2
 
+```python
+from reco_agent_bob import LiquorRecommendationEngine
+
+# Initialize the engine
+rec_engine = LiquorRecommendationEngine(
+    "data/generated_user_data.csv",
+    "data/501_Bottle_Dataset.csv"
+)
+
+# Get recommendations for a user
+user_id = 100004
+recommendations = rec_engine.recommend_for_user(user_id)
+
+# Print recommendations
+print(f"Recommendations for user {user_id}:")
+for rec in recommendations["recommendations"]:
+    print(f"{rec['rank']}. {rec['name']} ({rec['spirit_type']}) - ${rec['price']}")
+    print(f"   Reason: {rec['reason']}")
+```
+
+### Output
+
+```python
+Recommendations for user 100004:
+1. Larceny Barrel Proof Batch B522 (Bourbon) - $59.99
+   Reason: Similar to Larceny Barrel Proof Batch C923 in your collection
+2. Larceny Barrel Proof Batch B523 (Bourbon) - $59.0
+   Reason: Similar to Larceny Barrel Proof Batch C923 in your collection
+3. Jack Daniel's Bottled in Bond (Whiskey) - $37.99
+   Reason: Similar to Jack Daniel’s Triple Mash in your collection
+4. E.H. Taylor, Jr. Straight Rye (Rye) - $79.99
+   Reason: Add Rye to diversify your collection
+5. Nikka Coffey Grain Japanese Whisky (Japanese Whisky) - $70.92
+   Reason: Add Japanese Whisky to diversify your collection
+
+User Stats:
+Collection size: 10 bottles
+Average bottle price: $97.13
+Spirits in collection: Bourbon, Whiskey
+Diversity score: 0.2
+```
 ### Data Format
 
 #### User Collection Data (CSV)
