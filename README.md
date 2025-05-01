@@ -48,7 +48,7 @@ source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
-## Usage
+## Demo/Usage
 
 ### Basic Usage - Example 1
 
